@@ -1,0 +1,25 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram name="Page-1" id="sANlbZRRVLvKSVS3jUkL">
+    <mxGraphModel dx="1434" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DGVilzmJCnP7B7owzYVn-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="220" y="60" width="270" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="DGVilzmJCnP7B7owzYVn-2" value="&lt;div&gt;add item button placeholder&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="230" y="130" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DGVilzmJCnP7B7owzYVn-3" value="&lt;div&gt;Shopping list app title&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="295" y="80" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DGVilzmJCnP7B7owzYVn-4" value="Items to get" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="310" y="210" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="DGVilzmJCnP7B7owzYVn-5" value="List of items to get placeholder" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="230" y="250" width="250" height="320" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
