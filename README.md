@@ -20,4 +20,12 @@ Week 2:
      Business Information was written alongside instructor video "Mobile App Development - Getting Started with 
      React Native Pt. 1 - 2024"
 
+     BusinessCardApp was written by using Business Information - turned it clockwise to turn it to portrait mode.
+     Then adjusted to a left side/right side split (1 to 2), then split top to bottom on the left 3 x 1, and the
+     right side left as a single unit.
+
+Week 3:
+
+     Begin:
+
      
