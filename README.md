@@ -8,3 +8,8 @@ was a test of 'how to' program the local host
 
 Second:  this is a duplicate of First - just done to be sure that the whole theory was understood.
 
+My First App was written alongside instructor video Mobile App Development - React Native App First Look - 2024
+
+ It required some alterations regarding how it was written and the folders.  Primary - first noticeable difference - 
+ it has no app.js.  The file is run by index.tsx located within the app folder.
+
