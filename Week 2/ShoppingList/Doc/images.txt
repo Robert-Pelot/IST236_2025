@@ -1,0 +1,2 @@
+images are located in assets/images folder.
+This includes design drawings (PNG).
