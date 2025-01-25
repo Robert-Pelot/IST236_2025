@@ -3,6 +3,10 @@ README.md
  
 This repository is for IST236_I01 : 2025
 
+01/25/2025:
+I added a new file "LetsCreateANewApp-compressed.mp4" to the main directory.  This is a walkthrough 
+on how to start a new app using npx create-expo-app "nameofapp".  It may be helpful to newer programmers.
+
 Week 1: 1/5/25 - 1/11/25
      First:  this is just a short sample program - that opens up a port on the local host terminal.  It 
      was a test of 'how to' program the local host
