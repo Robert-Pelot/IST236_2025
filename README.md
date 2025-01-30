@@ -37,5 +37,14 @@ Week 3 : 1/19/25 - 1/25/25
      Added magicEightBall app - written parallel to the diceRoller App using information from DiceRoller and Shopping List Apps.
 
 Week 4 : 1/26/25 - 2/1/25
+     
+     Added TopRestaurants, written alongside instructor in video "Mobile App Development - Displaying with Lists and Implementing Custom 
+     Components Pt. 1 - 2024". 
+     Added Shopping List Week 4 update, written alonside instructor in video "Mobile App Development - Displaying with Lists and Implementing 
+     Custom Components Pt. 2 - 2024".
+Week 5 : 2/2/2025 - 2/8/2025
 
-     begin
+     Added VenueEvents written alongside instructor in video " Mobile App Development - Implementing Multi-Screen Applications Pt. 1 - 2024"
+
+     
+
