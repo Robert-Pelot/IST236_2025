@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="26.0.10">
+  <diagram name="Page-1" id="P_V7Mc8gke_zgGeGSbEc">
+    <mxGraphModel dx="1426" dy="781" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9a0vUbQd4RVQbUPRRV59-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="30" width="320" height="630" as="geometry" />
+        </mxCell>
+        <mxCell id="9a0vUbQd4RVQbUPRRV59-2" value="Title" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="50" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="9a0vUbQd4RVQbUPRRV59-3" value="Photo of Event Location" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="180" y="160" width="280" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="9a0vUbQd4RVQbUPRRV59-4" value="Phone Number&lt;div&gt;Address&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Web Site&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="450" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9a0vUbQd4RVQbUPRRV59-5" value="Button Link to Events" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="560" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9a0vUbQd4RVQbUPRRV59-6" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="30" width="340" height="630" as="geometry" />
+        </mxCell>
+        <mxCell id="9a0vUbQd4RVQbUPRRV59-7" value="Band Name" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="40" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9a0vUbQd4RVQbUPRRV59-8" value="photo of band" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="110" width="320" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="9a0vUbQd4RVQbUPRRV59-9" value="date of event" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="240" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9a0vUbQd4RVQbUPRRV59-11" value="date of event" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="490" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9a0vUbQd4RVQbUPRRV59-12" value="photo of band" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="360" width="320" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="9a0vUbQd4RVQbUPRRV59-13" value="Band Name" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="290" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9a0vUbQd4RVQbUPRRV59-17" value="Button Link to Home Page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="570" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9a0vUbQd4RVQbUPRRV59-18" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Main Page&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="255" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9a0vUbQd4RVQbUPRRV59-19" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Events Page&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="585" width="150" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
