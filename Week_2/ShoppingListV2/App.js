@@ -1,115 +1,32 @@
-import React from "react";
-import { useState } from "react";
 import { StatusBar } from "expo-status-bar";
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  Button,
-  Modal,
-  Image,
-  TextInput,
-  Pressable,
-  FlatList,
-  Alert,
-} from "react-native";
-import Item from "./components/item.js";
-import ItemInputModal from "./modals/iteminputModal.js";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 
 export default function App() {
-  // Create state management variables
-  const [modalIsVisible, setModalIsVisible] = useState(false);
-  const [shoppingItems, setShoppingItems] = useState([]);
-
-  const [currentID, setCurrentID] = useState(0);
-
-  // Create modal screen handler functions
-  function startAddItemHandler() {
-    setModalIsVisible(true);
-  }
-  function endAddItemHandler() {
-    setModalIsVisible(false);
-  }
-  function addItemHandler(enteredItemText) {
-    setShoppingItems((currentShoppingItems) => [
-      ...currentShoppingItems,
-      { text: enteredItemText, id: currentID },
-    ]);
-    setCurrentID(currentID + 1);
-    endAddItemHandler();
-  }
-
-  function deleteItemHandler(id){
-    Alert.alert(
-      "Delete Item",
-      "Are you sure you want to delete?",
-      [
-        {
-          text: "Cancel",
-          style: "cancel",
-        },
-        {
-          text: "Confirm",
-          style: "default",
-          onPress: () => {
-            setShoppingItems((currentShoppingItems) => {
-              return currentShoppingItems.filter((item) => item.id !== id);
-            });
-          },
-        },
-      ]
-    );
-  }
-
   return (
     <>
       {/* Set status bar styling */}
       <StatusBar style="light" />
       {/* Set safeareaview screen container */}
       <SafeAreaView style={styles.appContainer}>
-        {/* Set title container */}
+        {/* Set Title View */}
         <View style={styles.titleContainer}>
           <Text style={styles.titleText}>Shopping List</Text>
         </View>
-        {/* set add item button container */}
+
+        {/* Set add item button container */}
         <View style={styles.buttonContainer}>
-          <Pressable
-            // add the android ripple
-            android_ripple={{ color: "#B180F0" }}
-            // style the button when pressed
-            style={({ pressed }) => pressed && styles.pressedButton}
-            // when pressed, open modal screen
-            onPress={startAddItemHandler}
-          >
-            <View style={styles.addButton}>
-              <Text style={styles.addButtonText}> Add New Item</Text>
-            </View>
-          </Pressable>
+          <Text style={styles.buttontext}>Add Item Button Goes Here</Text>
         </View>
+
         {/* set items to get title container */}
         <View style={styles.subtitleContainer}>
-          <Text style={styles.subtitleText}>Items to Get</Text>
+          <Text style={styles.subtitle}>Items to Get</Text>
         </View>
-        {/* set list of items container */}
+
+        {/* set items to get list */}
         <View style={styles.listContainer}>
-          <FlatList 
-            data={shoppingItems}
-            keyExtractor={(item, index) => {
-              return item.id; 
-            }}
-            renderItem={(itemData) => {
-              return (
-                <Item 
-                  text={itemData.item.text} 
-                  id={itemData.item.id} 
-                  onDeleteItem={deleteItemHandler}
-                />
-              );
-            }}
-          />
+          <Text style={styles.listText}>List of items goes here</Text>
         </View>
-        <ItemInputModal onAddItem={addItemHandler} onCancel={endAddItemHandler} visible={modalIsVisible} />
       </SafeAreaView>
     </>
   );
@@ -124,58 +41,47 @@ const styles = StyleSheet.create({
     marginTop: 40,
   },
   titleContainer: {
-    flex: 1,
-    margin: 10,
-    justifyContent: "center",
-    paddingHorizontal: 30,
+    flex: 1,  
+    justifyContent: "center", 
     backgroundColor: "white",
+    margin: 10,
     borderBottomRightRadius: 20,
     borderTopLeftRadius: 20,
+    paddingHorizontal: 20,
   },
   titleText: {
     fontSize: 40,
     color: "#5E08CC",
+
+
   },
-  buttonContainer: {},
-  addButton: {
+  buttonContainer: {
+    flex: 1,
     justifyContent: "center",
-    backgroundColor: "white",
-    padding: 10,
-    borderWidth: 1,
-    borderRadius: 5,
+    backgroundColor: "white"
   },
-  addButtonText: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "#5E08CC",
-  },
-  pressedButton: {
-    opacity: 0.5,
-  },
-  buttonText: {
-    color: "#5E08CC",
+  buttontext: {
+
   },
   subtitleContainer: {
     flex: 1,
-    margin: 10,
-    paddingHorizontal: 30,
-    justifyContent: "center",
+    justifyContent: "center", 
     backgroundColor: "white",
+    margin: 10,
     borderBottomRightRadius: 20,
     borderTopLeftRadius: 20,
+    paddingHorizontal: 20,
   },
-  subtitleText: {
+  subtitle: {
     fontSize: 30,
     color: "#5E08CC",
   },
   listContainer: {
     flex: 7,
-    width: "90%",
+    backgroundColor: "#ffffff",
     justifyContent: "center",
-    alignItems: "center",
   },
   listText: {
-    fontSize: 20,
-    color: "black",
+
   },
 });
