@@ -1,12 +1,12 @@
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { useRouter } from 'expo-router';
 
-const Appetizer: React.FC = () => {
+const Mousse: React.FC = () => {
   const router = useRouter();
 
   return (
     <View style={styles.container}>
-      <Text>This is the appetizer page!</Text>
+      <Text>This is the mousse page!</Text>
       <Button title="Go Back" onPress={() => router.back()} />
     </View>
   );
@@ -21,4 +21,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Appetizer;
+export default Mousse;

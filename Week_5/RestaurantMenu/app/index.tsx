@@ -25,11 +25,15 @@ const router =useRouter();
  <View style={styles.divider} />
 <Button title="Main Course" onPress={() => router.push('/entrees')} />
  <View style={styles.divider} />
-<Button title="Desserts" onPress={() => router.push('/desserts')} />
+<Button title="Mousse" onPress={() => router.push('/mousse')} />
+ <View style={styles.divider} />
+<Button title="Dessert" onPress={() => router.push('/dessert')} />
  <View style={styles.divider} />
 
-
-
+ <View style={styles.container}>
+    <MyButton />
+  { /* Other components here */}
+  </View>
 
       <Link href="/about">About</Link>
      
