@@ -1,22 +1,78 @@
-import { View, StyleSheet, Image } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-
+import { View, StyleSheet, Image } from "react-native";
 import NavButton from "../components/NavButton";
-import Cards from "../constants/cards";
 import Header from "../components/Header";
+import Cards from "../constants/cards";
+
+function GameScreen(props) {
+  // set safe area screen boundaries
+  const insets = useSafeAreaInsets();
+
+  return (
+    <View
+      style={[
+        styles.rootContainer,
+        {
+          paddingTop: insets.top,
+          paddingBottom: insets.bottom,
+          paddingLeft: insets.left,
+          paddingRight: insets.right,
+        },
+      ]}
+    >
+        <View style={styles.titleContainer}>
+            <Header>Computer's Hand</Header>
+        </View>
+        
+        <View style={styles.computerImageContainer}>
+            <Image 
+                style={styles.computerImage}
+                source={require("../assets/images/cardback1.png")} 
+            />
+            <Image 
+                style={styles.computerImage}
+                source={Cards.aceSpades.picture} 
+            />
+        </View>
+
+        <View style={styles.titleContainer}>
+            <Header>Players's Hand</Header>
+        </View>
+        <View style={styles.playerImageContainer}>
+            <Image 
+                style={styles.playerImage}
+                source={Cards.jackSpades.picture} 
+            />
+            <Image 
+                style={styles.playerImage}
+                source={Cards.aceClubs.picture} 
+            />
+        </View>
+
+        <View style={styles.buttonsContainer}>
+            <View style={styles.buttonContainer}>
+                <NavButton style={styles.button}>Hit Me</NavButton>
+            </View>
+            <View style={styles.buttonContainer}>
+                <NavButton style={styles.button} onPress={props.onNext}>Stay</NavButton>
+            </View>
+        </View>
+
+
+    </View>
+  );
+}
+
+export default GameScreen;
 
 styles = StyleSheet.create({
-  gameScreenRootContainer: {
+  titleContainer: {
     flex: 1,
-  },
-  gameScreenHeaderContainer: {
-    flex: 2,
     justifyContent: "center",
     alignItems: "center",
-    paddingVertical: 20,
   },
-  computerImageContainer: {
-    flex: 1,
+  computerImageContainer:{
+    flex: 3,
     flexDirection: "row",
     justifyContent: "space-evenly",
     alignItems: "center",
@@ -37,65 +93,17 @@ styles = StyleSheet.create({
     width: 100,
     resizeMode: "contain",
   },
-  gameScreenButtonsContainer: {
+  buttonsContainer: {
     flex: 1,
-    flexDirection: "row",
+    flexDirection: 'row',
     justifyContent: "space-evenly",
     alignItems: "center",
   },
-  gameScreenButtonContainer: {
+  buttonContainer: {
     flex: 1,
     height: "100%",
     justifyContent: "center",
     marginHorizontal: 10,
-    marginBottom: 25,
   },
+
 });
-
-function GameScreen(props) {
-  // set safe area screen boundaries
-  const insets = useSafeAreaInsets();
-
-  return (
-    <View
-      style={[
-        styles.gameScreenRootContainer,
-        {
-          paddingTop: insets.top,
-          paddingBottom: insets.bottom,
-          paddingLeft: insets.left,
-          paddingRight: insets.right,
-        },
-      ]}
-    >
-      <View style={styles.gameScreenHeaderContainer}>
-        <Header>Computer's Hand</Header>
-      </View>
-
-      <View style={styles.computerImageContainer}>
-        <Image style={styles.computerImage} source={require("../assets/images/cardback1.png")} />
-        <Image style={styles.computerImage} source={Cards.aceSpades.picture} />
-      </View>
-
-      <View style={styles.gameScreenHeaderContainer}>
-        <Header>Weird Text Here Player's Hand</Header>
-      </View>
-
-      <View style={styles.playerImageContainer}>
-        <Image style={styles.playerImage} source={Cards.tenHearts} />
-        <Image style={styles.computerImage} source={Cards.aceHearts.picture} />
-      </View>
-
-      <View style={styles.gameScreenButtonsContainer}>
-        <View style={styles.gameScreenButtonContainer}>
-          <NavButton onPress={props.onNext}>Hit Me!</NavButton>
-        </View>
-        <View style={styles.gameScreenButtonContainer}>
-          <NavButton onPress={props.onNext}>Stay!</NavButton>
-        </View>
-      </View>
-    </View>
-  );
-}
-
-export default GameScreen;

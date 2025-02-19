@@ -11,8 +11,11 @@ export default Title;
 const styles = StyleSheet.create({
     title: {
         fontSize: 60,
-        fontFamily: "poker",
+        color: Colors.primary300,
+        textShadowColor: Colors.accent800,
+        // textShadowOffset: (width: 1, height: 1),
+        textShadowRadius: 25,
+        fontFamily: "noteFont",
         textAlign: "center",
-        color: Colors.primary500,
     }
 })
