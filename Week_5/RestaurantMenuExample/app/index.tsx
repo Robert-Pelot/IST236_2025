@@ -1,50 +1,65 @@
-import React from 'react';
-import { Text, StyleSheet, Button, View } from 'react-native';
-import { useRouter, Link } from 'expo-router';
+import React from "react";
+import { router, useRouter } from "expo-router";
+import {
+  Text,
+  StyleSheet,
+  View,
+  Image,
+  Linking,
+  TouchableOpacity,
+} from "react-native";
 
-
-function MyButton() {
-  return (
-    <button>I'm a button</button>
-  );
-}
+import Colors from "../constants/colors";
 
 const App: React.FC = () => {
-const router =useRouter();
   return (
     <View style={styles.container}>
-      <Text style={styles.textWithLineHeight}>
-        This is text with a specific line height. The space between the lines is controlled by the lineHeight property.
-      </Text>
-      <Text>Welcome to my app</Text>
-     <View style={styles.divider} />
-
-<Button title="Click Me" onPress={() => alert('Button Clicked!')} />
- <View style={styles.divider} />
-<Button title="Appetizer" onPress={() => router.push('/appetizer')} />
- <View style={styles.divider} />
-<Button title="Main Course" onPress={() => router.push('/entrees')} />
- <View style={styles.divider} />
-<Button title="Mousse" onPress={() => router.push('/mousse')} />
- <View style={styles.divider} />
-<Button title="Dessert" onPress={() => router.push('/dessert')} />
- <View style={styles.divider} />
-
- <View style={styles.container}>
-    <MyButton />
-  { /* Other components here */}
-  </View>
-
-      <Link href="/about">About</Link>
-     
-      <Link href="/user/bacon">View user</Link>
-<View style={styles.divider} />
-      <Text>TY for visiting my app</Text>
-      
-
-         <Text style={styles.defaultText}>
-        This is text with the default line height. Notice the difference in spacing compared to the text above.
-      </Text>
+      <Image
+        source={require("../assets/images/Joe's Diner.jpg")}
+        style={styles.restaurantImage}
+      />
+      <Text style={styles.restaurantName}>Joe's Diner</Text>
+      <View style={styles.detailsContainer}>
+        <TouchableOpacity
+          onPress={() => Linking.openURL("mailto:contact@example.com")}
+        >
+          <Text style={styles.detailsText}>Contact Us</Text>
+        </TouchableOpacity>
+        <TouchableOpacity 
+          onPress={() => Linking.openURL("tel:+18432945637")}>
+          <Text style={styles.detailsText}>Phone: +1 (843) 294-5637</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() =>
+            Linking.openURL(
+              "https://www.google.com/maps/search/2895+Fred+Nash+Blvd,+Myrtle+Beach,+SC+29577"
+            )
+          }
+        >
+          <Text style={styles.detailsText}>
+            Address: 2895 Fred Nash Blvd, Myrtle Beach, SC. 29577
+          </Text>
+        </TouchableOpacity>
+        {/* Just a note here - but Joe's Diner has no website, so I used a fake address */}
+        <TouchableOpacity
+          onPress={() => Linking.openURL("https://www.joesdiner.com")}
+        >
+          <Text style={styles.detailsText}>Website: www.joesdiner.com</Text>
+        </TouchableOpacity>
+      </View>
+      <TouchableOpacity
+        style={styles.buttonStyles}
+        onPress={() => {
+          try {
+            router.push("/MenuScreen");
+          } catch (error) {
+            console.error("Navigation error:", error);
+          }
+        }}
+      >
+        <Text style={styles.buttonText}>See Menu</Text>
+      </TouchableOpacity>
+      <Text style={styles.tytext}>TY for visiting my app</Text>
     </View>
   );
 };
@@ -52,24 +67,63 @@ const router =useRouter();
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     padding: 20,
+    backgroundColor: Colors.primary500,
   },
-  textWithLineHeight: {
-    fontSize: 16,
-    lineHeight: 24, // Adjust this value to change the vertical spacing
+  restaurantImage: {
+    width: "100%",
+    height: 250,
+    resizeMode: "cover",
+    borderRadius: 10,
+    marginBottom: 20,
+  },
+  restaurantName: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#333",
     marginBottom: 10,
   },
-  defaultText: {
-    fontSize: 16,
+  detailsContainer: {
+    width: "100%",
+    padding: 20,
+    backgroundColor: Colors.accent500,
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.6,
+    shadowRadius: 4,
+    marginTop: 20,
+  },
+  detailsTitle: {
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "#444",
     marginBottom: 10,
   },
-  divider: {
-    height: 1,
-    backgroundColor: '#ccc',
-    marginVertical: 10,
+  detailsText: {
+    fontSize: 16,
+    color: "white",
+    marginBottom: 8,
+    textDecorationLine: "underline",
+  },
+  buttonStyles: {
+    marginTop: 10,
+    backgroundColor: Colors.accent500,
+    padding: 12,
+    borderRadius: 5,
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 16,
+  },
+  tytext: {
+    fontSize: 16,
+    textAlign: "center",
+    marginTop: 20,
   },
 });
-
 
 export default App;
