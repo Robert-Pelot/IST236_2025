@@ -25,10 +25,12 @@ const App: React.FC = () => {
         >
           <Text style={styles.detailsText}>Contact Us</Text>
         </TouchableOpacity>
+
         <TouchableOpacity 
           onPress={() => Linking.openURL("tel:+18432945637")}>
           <Text style={styles.detailsText}>Phone: +1 (843) 294-5637</Text>
         </TouchableOpacity>
+
         <TouchableOpacity
           onPress={() =>
             Linking.openURL(
@@ -40,12 +42,14 @@ const App: React.FC = () => {
             Address: 2895 Fred Nash Blvd, Myrtle Beach, SC. 29577
           </Text>
         </TouchableOpacity>
+        
         {/* Just a note here - but Joe's Diner has no website, so I used a fake address */}
         <TouchableOpacity
           onPress={() => Linking.openURL("https://www.joesdiner.com")}
         >
           <Text style={styles.detailsText}>Website: www.joesdiner.com</Text>
         </TouchableOpacity>
+
       </View>
       <TouchableOpacity
         style={styles.buttonStyles}
