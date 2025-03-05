@@ -5,7 +5,7 @@ import NavButton from "../components/NavButton";
 
 function StartGameScreen(props) {
   // set safe area scre3en boundaries
-  const insets = useSafeAreaInsets();
+const insets = useSafeAreaInsets();
 const { width, height } = Dimensions.get("window");
 console.log(`Screen width: ${width}, height: ${height}`);
 
