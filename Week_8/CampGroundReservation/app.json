@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "CampGroundReservation",
+    "slug": "CampGroundReservation",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/images/mcintosh-lake-campground.jpg",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/mcintosh-lake-campground.jpg",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/lake-and-dock.jpg"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/lake-and-dock.jpg",
+          "resizeMode": "cover",
+          "backgroundColor": "blue"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
