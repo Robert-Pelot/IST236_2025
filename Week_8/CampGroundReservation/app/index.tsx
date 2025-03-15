@@ -28,6 +28,13 @@ export default function Index() {
       SplashScreen.hideAsync(); // Explicitly hide the splash screen after the timeout
     }, 10000); // Delay in milliseconds (10 seconds)
 
+    // just a note here - nothing I did made the splash screen stay up longer
+    // nothing I did made the splash screen expand to full screen.
+    // I tried about 20 different ways and just gave up.
+    // this is the second or third program in a row I have had this problem.
+
+
+
     return () => clearTimeout(timer); // Cleanup the timeout if the component unmounts
   }, []);
 
