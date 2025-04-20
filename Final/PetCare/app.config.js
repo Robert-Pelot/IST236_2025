@@ -5,8 +5,8 @@ dotenv.config();
 
 export default {
   expo: {
-    name: 'YourApp',
-    slug: 'your-app',
+    name: 'PetCare',
+    slug: 'PetCare',
     extra: {
       FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
       FIREBASE_AUTH_DOMAIN: process.env.FIREBASE_AUTH_DOMAIN,
